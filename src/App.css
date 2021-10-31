@@ -58,25 +58,26 @@ code {
 
 .JokeList-sidebar {
   background: #785aaa;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.25), 0 15px 12px rgba(0, 0, 0, 0.1),
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5), 0 15px 12px rgba(0, 0, 0, 0.1),
   inset 0 0 25px #7e57c2;
   z-index: 2;
 }
 
   .JokeList-sidebar img {
-    width: 50%;
+    width: 40%;
     border-radius: 50%;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
   }
 
 .JokeList-title {
   color: #fff;
-  font-size: calc(2rem + 3vw);
+  font-size: calc(2rem + 2.5vw);
   margin: 2rem;
   font-weight: 300;
   letter-spacing: 0.6rem;
@@ -100,8 +101,8 @@ code {
 .JokeList-nocontent {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+    align-items: center;
+    height: 100%;
   font-size: 2rem;
 }
 
@@ -171,7 +172,7 @@ code {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  border-radius: 50px;
+  border-radius: 100%;
   border: 3px solid green;
   text-align: center;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
