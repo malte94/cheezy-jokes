@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Demo on Codesandbox
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+See this little application live via Codesandbo.
+
+https://codesandbox.io/s/github/malte94/cheezy-jokes
 
 ## Available Scripts
 
