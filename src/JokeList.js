@@ -7,9 +7,9 @@ import Joke from './Joke.js';
 
 export default function JokeList(props) {
 
-    const[jokes, setJokes] = useState([]);
+    const[jokes, setJokes] = useState(JSON.parse(window.localStorage.getItem("jokes")) || []); // if local storage --> get this. else empty array.
 
-    const getJokes = async () => {
+    const populateJokes = async () => {
         for(let i = 0; i < props.numJokesToGet; i++) {
             await axios.get("https://icanhazdadjoke.com/", {headers: {Accept: "application/json"}})
             .then((res) => setJokes(prev => [...prev, {
@@ -18,19 +18,16 @@ export default function JokeList(props) {
                 votes: 0
             }]))
         }
-        /* As an alternative approach: Set an empty array (let x = []) to the beginning of this function.
-        Popoluate setJokes(x) HERE, 'await' will wait for it,
-        and use another useEffect, which listens to [jokes] to output
-            1. the console.log only once and
-            2. the DOM only once.
-        (The API is quite slow, so with the currently implemented method a rendering is visible) */
     }
             useEffect(() => {
-                setJokes([]); // clear jokes
-                getJokes();
-            },[])
+                if(jokes.length === 0) populateJokes()
+            }, [])
 
             useEffect(() => {
+                window.localStorage.setItem(
+                    "jokes",
+                    JSON.stringify(jokes)
+                )
                 console.log("Updated the Jokes: ");
                 console.log(jokes);
             }, [jokes]);

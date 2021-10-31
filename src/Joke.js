@@ -45,7 +45,7 @@ export default function Joke(props) {
             </div>
             <div className="Joke-text">{props.text}</div>
             <div className="Joke-smiley">
-                <i class={getEmoji()} aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i>
+                <i className={getEmoji()}></i>
             </div>
         </div>
     )
