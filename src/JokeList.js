@@ -30,20 +30,20 @@ export default function JokeList(props) {
             }, [])
 
             /*onUpdate of jokes*/ useEffect(() => {
-                let sortedJokes = jokes.sort((a,b) => b.votes - a.votes);
                 window.localStorage.setItem(
                     "jokes",
-                    JSON.stringify(sortedJokes)
+                    JSON.stringify(jokes)
                 )
                 console.log("Updated the Jokes: ");
                 console.log(jokes);
             }, [jokes]);
 
     const handleVote = (id, voteValue) => {
-        setJokes(
-            jokes.map(j => (
+        let voteJokes = jokes.map(j => (
             j.id === id ? {...j, votes: j.votes + voteValue} : j
-        )))
+        ));
+        let sortedJokes = voteJokes.sort((a,b) => b.votes - a.votes);
+        setJokes(sortedJokes);
     }
 
     const handleClick = () => {
