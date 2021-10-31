@@ -200,6 +200,11 @@ code {
     zoom: 0.95;
   }
 
+  .Joke .fa-arrow-up, .Joke .fa-arrow-down {
+    margin: 10px 2px 10px 2px;
+    cursor: pointer;
+  }
+
 }
 
 @media (max-width: 768px) { 
