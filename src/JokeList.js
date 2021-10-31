@@ -23,12 +23,13 @@ export default function JokeList(props) {
         }
         setLoading(false);
     }
+
             /*initial loading*/ useEffect(() => {
                 if(jokes.length === 0) populateJokes();
                 console.log("Populated ...");
             }, [])
 
-            /*onChange: jokes*/ useEffect(() => {
+            /*onUpdate of jokes*/ useEffect(() => {
                 let sortedJokes = jokes.sort((a,b) => b.votes - a.votes);
                 window.localStorage.setItem(
                     "jokes",
