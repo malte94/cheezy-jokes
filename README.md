@@ -1,6 +1,6 @@
-# Demo on Codesandbox
+# Demo on codesandbox.io
 
-See this little application live via Codesandbo.
+See this little application live via Codesandbox.
 
 https://codesandbox.io/s/github/malte94/cheezy-jokes
 
