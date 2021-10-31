@@ -167,10 +167,13 @@ code {
 
 .Joke-votes {
   font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.9);
   font-weight: 700;
-  padding: calc(5px + 0.5vw);
+    min-width: 50px;
+    min-height: 50px;
+    line-height: 50px;
   border-radius: 100%;
-  border: 5px solid green;
   text-align: center;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
 }
@@ -236,10 +239,18 @@ code {
 
   .JokeList-jokes {
     width: 100%;
+    overflow: hidden;
 
   }
     .Joke {
-      width: 90%;
+      width: 95%;
+      margin-left: -10px;
+    }
+
+    .Joke-votes {
+      width: 30px;
+      height: 30px;;
+      line-height: 50px;
     }
 
     .Joke .fa-arrow-up, .Joke .fa-arrow-down {

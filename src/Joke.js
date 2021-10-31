@@ -40,7 +40,7 @@ export default function Joke(props) {
         <div className="Joke">
             <div className="Joke-buttons">
                 <i className="fas fa-arrow-up" onClick={props.upvote}></i>
-                <span className="Joke-votes" style={{borderColor: getColor()}}>{props.votes}</span>
+                <span className="Joke-votes" style={{backgroundColor: getColor()}}>{props.votes}</span>
                 <i className="fas fa-arrow-down" onClick={props.downvote}></i>
             </div>
             <div className="Joke-text">{props.text}</div>
