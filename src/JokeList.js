@@ -19,18 +19,20 @@ export default function JokeList(props) {
                 id: uuidv4(),
                 joke: res.data.joke, 
                 votes: 0
-            }]))
+            }]));
         }
         setLoading(false);
     }
             /*initial loading*/ useEffect(() => {
-                if(jokes.length === 0) populateJokes()
+                if(jokes.length === 0) populateJokes();
+                console.log("Populated ...");
             }, [])
 
             /*onChange: jokes*/ useEffect(() => {
+                let sortedJokes = jokes.sort((a,b) => b.votes - a.votes);
                 window.localStorage.setItem(
                     "jokes",
-                    JSON.stringify(jokes)
+                    JSON.stringify(sortedJokes)
                 )
                 console.log("Updated the Jokes: ");
                 console.log(jokes);
