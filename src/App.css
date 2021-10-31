@@ -108,7 +108,7 @@ code {
 
 .JokeList-getmore, .JokeList-delete {
   font-size: 1.5rem;
-  width: 50%;
+  width: calc(100% - 10vw);
   border-radius: 2rem;
   padding: 1rem 2rem;
   color: white;
@@ -121,6 +121,7 @@ code {
   outline: none;
   background: #6c4ba1;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
   .JokeList-delete {
